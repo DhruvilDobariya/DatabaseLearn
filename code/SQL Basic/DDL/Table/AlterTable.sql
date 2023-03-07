@@ -27,3 +27,7 @@ Alter Table Faculty
 Drop Column Email,
 Drop Column Subject;
 
+-- Raname table name
+Alter Table Faculty
+Rename To FacultyNew
+
