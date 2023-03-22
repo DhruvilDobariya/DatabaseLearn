@@ -5,6 +5,13 @@ Where RollNo IN
     SELECT RollNo FROM Result
     WHERE  Grade = "A"
 );
+-- Or
+SELECT * From Student
+Where RollNo = 
+(
+    SELECT RollNo FROM Result
+    WHERE  Grade = "A"
+);
 -- Here we have two table and We want to get those student who beloges to the grade A.
 -- Student Table{ Id, RollNo, Name, ContactNo}
 -- Result Table{ Id, RollNo, Grade}

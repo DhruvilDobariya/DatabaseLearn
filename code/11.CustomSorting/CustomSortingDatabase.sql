@@ -1,0 +1,53 @@
+-- Create Database CustomeSorting;
+-- use CustomeSorting;
+
+-- create table User (
+-- 	Id Int not null Auto_Increment, 
+-- 	FirstName VARCHAR(50),
+-- 	LastName VARCHAR(50),
+-- 	Email VARCHAR(50),
+-- 	Gender VARCHAR(50),
+-- 	BirthMonth VARCHAR(50),
+--     Primary Key(Id)
+-- );
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Kristos', 'Tonry', 'ktonry0@dmoz.org', 'Genderqueer', 'January');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Germaine', 'Yellop', 'gyellop1@technorati.com', 'Male', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Woodman', 'Bouts', 'wbouts2@wordpress.org', 'Male', 'March');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Hakeem', 'Spaule', 'hspaule3@accuweather.com', 'Male', 'January');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Johnathan', 'Dorrian', 'jdorrian4@shop-pro.jp', 'Male', 'March');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Kurtis', 'Cattle', 'kcattle5@mapquest.com', 'Male', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Renae', 'Miere', 'rmiere6@cafepress.com', 'Female', 'August');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Delores', 'Chaulk', 'dchaulk7@theguardian.com', 'Female', 'December');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Elga', 'Hucke', 'ehucke8@slate.com', 'Female', 'July');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Mimi', 'Miettinen', 'mmiettinen9@narod.ru', 'Female', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Nicolette', 'Semple', 'nsemplea@illinois.edu', 'Female', 'January');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Ekaterina', 'Tingly', 'etinglyb@typepad.com', 'Female', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Bradney', 'Ridesdale', 'bridesdalec@princeton.edu', 'Male', 'July');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Dallas', 'Borman', 'dbormand@dion.ne.jp', 'Non-binary', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Darline', 'Arno', 'darnoe@shinystat.com', 'Female', 'August');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Bond', 'O''Bradain', 'bobradainf@github.io', 'Male', 'September');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Breanne', 'Rubinchik', 'brubinchikg@shinystat.com', 'Female', 'January');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Delmor', 'MacSwayde', 'dmacswaydeh@mac.com', 'Male', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Murray', 'Waddam', 'mwaddami@reference.com', 'Male', 'June');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Jermayne', 'Zannotti', 'jzannottij@fotki.com', 'Male', 'October');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Stafford', 'Doy', 'sdoyk@flavors.me', 'Male', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Doralynn', 'Lifsey', 'dlifseyl@bloomberg.com', 'Female', 'November');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Nichole', 'Basford', 'nbasfordm@jigsy.com', 'Male', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Booth', 'Patey', 'bpateyn@feedburner.com', 'Male', 'April');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Napoleon', 'Loverock', 'nloverocko@hhs.gov', 'Male', 'April');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Rosette', 'Goldie', 'rgoldiep@pinterest.com', 'Female', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Melinda', 'Krysztofowicz', 'mkrysztofowiczq@gravatar.com', 'Female', 'November');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Shannon', 'Symington', 'ssymingtonr@netlog.com', 'Female', 'May');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Rebekah', 'Faulo', 'rfaulos@blogtalkradio.com', 'Female', 'May');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Stinky', 'Heindl', 'sheindlt@msn.com', 'Bigender', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Jasen', 'Chalke', 'jchalkeu@ow.ly', 'Male', 'May');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Torie', 'Paulou', 'tpaulouv@cnet.com', 'Female', 'December');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Kennith', 'Comber', 'kcomberw@gov.uk', 'Male', 'February');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Olympie', 'Dearnaly', 'odearnalyx@epa.gov', 'Female', 'January');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Paquito', 'Willan', 'pwillany@upenn.edu', 'Male', 'October');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Lissie', 'Keeble', 'lkeeblez@psu.edu', 'Female', 'March');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Etan', 'Mursell', 'emursell10@slate.com', 'Male', 'October');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Vassily', 'Naul', 'vnaul11@webmd.com', 'Male', 'December');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Leyla', 'Sisnett', 'lsisnett12@amazonaws.com', 'Female', 'June');
+-- insert into User (FirstName, LastName, Email, Gender, BirthMonth) values ('Guinevere', 'Giannazzi', 'ggiannazzi13@answers.com', 'Female', 'January');
+

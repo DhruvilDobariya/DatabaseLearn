@@ -45,7 +45,7 @@
 
 -- Select * from Student
 -- Where Name like "%e";
--- -- starting name from e
+-- -- ending name from e
 
 -- Select * from Student
 -- Where Name like "a%e";
@@ -63,4 +63,11 @@
 -- Select Name from Student
 -- Limit 5;
 
-Select Name as Username from Student;
+-- Select Name from Student
+-- Limit 5;
+
+-- Select Id, Name from Student
+-- Limit 5,10;
+-- -- skip first 5 and get 10 recored
+
+-- Select Name as Username from Student;

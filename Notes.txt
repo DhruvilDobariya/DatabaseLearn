@@ -1,0 +1,164 @@
+
+DDL:
+Create Database databasename;
+Drop Database database name;
+
+Create Table TableName( 
+	column1name type,
+	.
+	.
+	.
+);
+drop table tablename
+
+Alter Table TableName
+Rename To NewTableName
+
+Alter Table TableName
+Add Column ColumnName Type
+
+Alter Table TableName
+Modify Column ColumnName Type
+
+Alter Table TableName
+Drop Column ColumnName
+
+Truncate Table TableName
+
+DML:
+Insert into TableName (column1, column2,...) values 
+(Value1, Value 2...),
+.
+.
+.;
+
+Update TableName
+Set 
+ColumnName = Value,
+.
+.
+.;
+
+Delete form TableName
+
+DCL:
+Grant insert, select on studentdb to root
+Revoke insert, select on studentdb from root
+
+TCL:
+Begin: start transection
+Set Transaction [Read Write | Read only | Write Only]
+Savepoint SvapointName
+Rollback
+Commit
+
+DQL:
+Select * From Student
+Where Id In (1,5,7,10);
+
+Select * from Student
+Where Id Between 5 And 7;
+-- Upper bound and lower bound include
+
+Select * from Student
+Where Id > 20 And Name = "Dhruvil";
+
+Select * From Student
+Where Id < 20 Or Name = "Dhruvil";
+
+Select * From Student
+Order By Name, Id;
+
+Select * From Student
+Order By Name, Id Desc;
+
+Select * From Student
+Limit 5;
+
+Keys:
+
+Id Int Auto_Increment
+Primary Key(Id)
+Unique (Id)
+Foriegn Key(StudentId) Reference Student(StudentId)
+
+Id int Auto_Increment
+Constraint PK_User Primary Key(Id)
+Constraint UK_User Unique (Id, Name, Email)
+Constraint FK_User_Student Foriegn Key(StudentId)
+
+Join:
+
+Select * From Student
+Inner Join on Collage
+Collage.Id = Student.CollageId
+
+Select * From Student
+Left Join on Collage
+Collage.Id = Student.CollageId
+
+Select * From Student
+Right Join on Collage
+Collage.Id = Student.CollageId
+
+Select * From Student
+Full Joiun on Collage
+Collage.Id = Student.CollageId
+
+Union:
+
+Select * From BCX
+Union
+Select * From BCY
+-- Remove duplicate value
+
+Select * From BCX
+Union All
+Select * From BCY
+-- Don't Remove Duplicate Value
+
+Aggregate Function:
+
+Count
+Sum
+Min
+Max
+Avg
+
+Select Collage, Count(StudentName) As StudentCount From Student
+Group By Collage
+Having StudentCount > 20;
+
+Index:
+
+Create Index IndexName
+on TableName(ColumnName);
+
+Alter Index Index Name
+on TableName(ColumnName1, ColumnName2,...);
+
+Show Inde from TableName;
+
+Drop Index IndexName;
+
+View:
+
+Create View ViewName
+As
+Select Statement;
+
+Alter View ViewName
+As
+Select Statement;
+
+Rename Table ViewName
+to NewViewName;
+
+Select * From ViewName;
+
+Drop View ViewName;
+
+
+
+
+

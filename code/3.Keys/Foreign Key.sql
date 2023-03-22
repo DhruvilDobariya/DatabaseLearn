@@ -11,6 +11,5 @@ CREATE TABLE Orders (
     OrderNumber int NOT NULL,
     PersonID int,
     PRIMARY KEY (OrderID),
-    CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID)
-    REFERENCES Persons(PersonID)
+    CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
 );

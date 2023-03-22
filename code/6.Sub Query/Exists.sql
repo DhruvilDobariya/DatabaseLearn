@@ -7,10 +7,11 @@ WHERE EXISTS (
     SELECT * FROM Products 
     WHERE Products.SupplierID = Suppliers.SupplierID AND Price > 20
 );
+-- Here if child query give any thing as output then an only then we get output from perent query.
 
--- using In
 SELECT SupplierName FROM Suppliers
-WHERE SupplierID In (
-    SELECT SupplierID FROM Products 
-    WHERE Price > 20
+WHERE NOT EXISTS (
+    SELECT * FROM Products 
+    WHERE Products.SupplierID = Suppliers.SupplierID AND Price > 20
 );
+-- If child query don't give any thing as a output then an only then we get outpot from perent query. 
