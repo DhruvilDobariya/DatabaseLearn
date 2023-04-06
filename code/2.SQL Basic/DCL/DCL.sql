@@ -1,11 +1,18 @@
--- grant privilege_name on object_name
--- to {user_name | public | role_name} 
+-- DCL Command
+-- 1. Grant
+-- 2. Revoke
 
--- revoke privilege_name on object_name
--- from {user_name | public | role_name}
+-- Create New User
+CREATE USER Dhruvil@LOCALHOST IDENTIFIED BY 'Dhruvil123';
 
-GRANT insert, select on studentdb to root
--- We give permision of insrt into studentdb to root
+-- Show users
+SELECT * FROM MYSQL.USER;
 
-REVOKE insert, select on studentdb from root
--- We revoke permision of insrt into studentdb from root
+-- Grant To user for select operation
+GRANT INSERT ON Book TO Dhruvil@LOCALHOST; 
+
+-- Revoke privileges
+REVOKE Insert ON Book FROM Dhruvil@LOCALHOST;
+
+-- Delete User
+DROP USER Dhruvil@LOCALHOST;

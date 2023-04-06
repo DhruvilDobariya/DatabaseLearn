@@ -1,3 +1,65 @@
+Why MySql:
+Open Source
+fast compare to other database because of partial indexing, fully-text indexing, unique memory chaching
+More secure because of Secure Soket Layer SSL
+Scallable
+
+
+InnoDB:
+row lavel locking
+Foigen Constarins
+above 5.5
+indexing
+
+MylSam:
+table level locking
+belove 5.5
+
+CSV:
+Archive:
+Memory:
+ndbcluster:
+BlackHole:
+Federared
+MRG_MyISAM
+
+Version:
+below 4.1
+heap memory storage
+hash table create so fast retrive
+
+5.7
+JSON Supptot
+InnoDB Improvements
+Parformance improvement
+Security imptovement
+
+8.0
+Data Diretory
+Regular expression
+Error logging
+backup lock
+Connection management
+time zone management
+
+ACID:
+Atomicity: 0% or 100% transaction
+Consistoncy: If A send and B recive money then cut in A and past in B, and befor a+b equals to after a+b
+Isolation: during transaction, it is in isolation, don't affect other transaction.
+Durability: Once trasiction is commit then it remain same even in system failer.
+
+Normlization:
+It is a process which imrove table' scallability, intigrity and storage efficiancy
+
+1NF: Each cell contains single value
+2NF: 1NF and Every non primary key attribute fully depended on primary key
+3NF: 2NF and every non primary key atribute is not transitivly depends on primary key
+BCNF: 3NF and every functional detrmine should me primary key. 
+     => Ex: detarmine =>{detminastic1, determinastic2,...}
+     => AccountNo => {Balance, Branch}
+4NF: BCNF and have not multivalue dependancy
+5NF: 4NF and can not have lossless decomposition
+     => decompose joins and divide into parent child relationship 
 
 DDL:
 Create Database databasename;
