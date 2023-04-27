@@ -1,31 +1,113 @@
-Create Procedure InsertBook(
-	p_Title varchar(250),
-    p_Author varchar(250),
-    p_Price Decimal,
-    p_Rating INT,
-    p_PublishDate Date,
-    p_URL varchar(250),
-    p_Description varchar(500)
+DELIMITER //
+Create Procedure GetStudents()
+Begin
+	Select 
+		Student.StudentId,
+        Student.FirstName,
+        Student.LastName,
+        Student.Email,
+        Student.Gender,
+        Collage.Name As CollageName,
+        City.CityName
+	From
+		Student
+        Join Collage
+        on Collage.CollageId = Student.CollageId
+        Join City
+        on City.CityId = Student.CityId;
+End //
+DELIMITER;
+
+DELIMITER //
+Create Procedure GetStudentById
+(
+	In StudentId int
 )
 Begin
-	Insert into Book (
-		Title,
-        Author,
-        Author,
-        Price,
-        Rating,
-        PublishDate,
-        URL,
-        Description
-    )
-    value (
-		p_Title,
-        p_Author,
-        p_Author,
-        p_Price,
-        p_Rating,
-        PublishDate,
-		p_URL
-    )
-End;
-	
+	Select 
+		Student.StudentId,
+        Student.FirstName,
+        Student.LastName,
+        Student.Email,
+        Student.Gender,
+        Collage.Name As CollageName,
+        City.CityName
+	From
+		Student
+        Join Collage
+        on Collage.CollageId = Student.CollageId
+        Join City
+        on City.CityId = Student.CityId
+	Where 
+		Student.StudentId = StudentId;
+End //
+DELIMITER;
+
+Delimiter //
+Create Procedure AddStudent
+(
+	In FirstName nvarchar(50),
+    In LastName nvarchar(50),
+    In Email nvarchar(50),
+    In Gender nvarchar(50),
+    In CollageId int,
+    In CityId int
+)
+Begin
+	Insert into Student
+		(
+			FirstName,
+            LastName,
+            Email,
+            Gender,
+            CollageId,
+            CityId
+        )
+	values
+		(
+			FirstName,
+            LastName,
+            Email,
+            Gender,
+            CollageId,
+            CityId
+        );
+End //
+Delimiter;
+
+Delimiter //
+Create Procedure UpdateStudent
+(
+	In StudentId int,
+	In FirstName nvarchar(50),
+    In LastName nvarchar(50),
+    In Email nvarchar(50),
+    In Gender nvarchar(50),
+    In CollageId int,
+    In CityId int
+)
+Begin
+	Update Student
+	Set
+		Student.FirstName = FirstName,
+		Student.LastName = LastName,
+		Student.Email = Email,
+		Student.Gender = Gender,
+		Student.CollageId = CollageId,
+		Student.CityId = CityId
+	Where
+		Student.StudentId = StudentId;
+End //
+Delimiter;
+
+Delimiter //
+Create Procedure DeleteStudent
+(
+	In StudentId int
+)
+Begin
+	Delete From Student
+	Where
+		Student.StudentId = StudentId;
+End //
+Delimiter;
