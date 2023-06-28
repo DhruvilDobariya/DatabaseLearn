@@ -111,3 +111,6 @@ Begin
 		Student.StudentId = StudentId;
 End //
 Delimiter;
+
+Show Procedure Status
+Where db = "FunctionLearn";
