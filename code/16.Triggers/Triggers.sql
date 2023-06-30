@@ -17,46 +17,49 @@
 --     Primary Key(LogId)
 -- );
 
--- Delimiter //
--- Create Trigger BeforeInserProduct
--- Before Insert On Product
--- For each row 
--- Begin
--- 	Insert into UserLog (Activity, Description) values ("Add", Concat("User starting to add new ", + new.ProductName));
--- End //
--- Delimiter ;
+Delimiter //
+Create Trigger BeforeInserProduct
+Before Insert On Product
+For each row 
+Begin
+	Insert into UserLog (Activity, Description) values ("Add", Concat("User starting to add new ", + new.ProductName));
+End //
+Delimiter ;
 
--- Delimiter //
--- Create Trigger AfterInserProduct
--- After Insert On Product
--- For each row 
--- Begin
--- 	Insert into UserLog (Activity, Description) values ("Add", Concat(new.ProductName, " added successfully by User"));
--- End //
--- Delimiter ;
+Delimiter //
+Create Trigger AfterInserProduct
+After Insert On Product
+For each row 
+Begin
+	Insert into UserLog (Activity, Description) values ("Add", Concat(new.ProductName, " added successfully by User"));
+End //
+Delimiter ;
 
--- Delimiter //
--- Create Trigger BeforeUpdateProduct
--- Before Update On Product
--- For each row 
--- Begin
--- 	Insert into UserLog (Activity, Description) values ("Update", Concat("User starting to update ", + old.ProductName, " with " , new.ProductName));
--- End //
--- Delimiter ;
+Delimiter //
+Create Trigger BeforeUpdateProduct
+Before Update On Product
+For each row 
+Begin
+	Insert into UserLog (Activity, Description) values ("Update", Concat("User starting to update ", old.ProductName, " with " , new.ProductName));
+End //
+Delimiter ;
 
--- Delimiter //
--- Create Trigger AfterUpdateProduct
--- After Update On Product
--- For each row 
--- Begin
--- 	Insert into UserLog (Activity, Description) values ("Update", Concat(old.ProductName, " updated successfully with ", new.ProductName ," by User"));
--- End //
--- Delimiter ;
+Delimiter //
+Create Trigger AfterUpdateProduct
+After Update On Product
+For each row 
+Begin
+	Insert into UserLog (Activity, Description) values ("Update", Concat(old.ProductName, " updated successfully with ", new.ProductName ," by User"));
+End //
+Delimiter ;
 
 -- Drop Trigger AfterInserProduct;
 -- Drop Trigger AfterUpdateProduct;
 -- Drop Trigger BeforeInserProduct;
 -- Drop Trigger BeforeUpdateProduct;
+
+-- Show all triggers
+-- SHOW TRIGGERS FROM triggerlearn; 
 
 Insert into Product (ProductName) value ("HP Laptop");
 Update Product 

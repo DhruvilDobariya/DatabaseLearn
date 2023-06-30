@@ -1,3 +1,5 @@
+use joinLearn;
+
 DELIMITER //
 Create Procedure GetStudents()
 Begin
@@ -112,5 +114,8 @@ Begin
 End //
 Delimiter;
 
+-- Drop PROCEDURE DelateStudent;
+
+-- Show all procedure
 Show Procedure Status
-Where db = "FunctionLearn";
+Where db = "JoinLearn";
